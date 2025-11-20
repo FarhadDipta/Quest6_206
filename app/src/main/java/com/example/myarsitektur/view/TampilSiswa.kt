@@ -23,3 +23,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.example.myarsitektur.R
 import com.example.myarsitektur.model.Siswa
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun TampilSiswa(
+    statusUiSiswa: Siswa,
+    onBackButtonClicked: () -> Unit,
+) {
