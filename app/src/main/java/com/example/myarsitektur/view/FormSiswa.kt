@@ -142,3 +142,31 @@ fun FormSiswa(
             ) {
                 Text(text = stringResource(id = R.string.submit))
             }
+            HorizontalDivider(
+                modifier = Modifier.padding(
+                    bottom = dimensionResource(id = R.dimen.padding_medium),
+                    top = dimensionResource(id = R.dimen.padding_medium)
+                ),
+                thickness = dimensionResource(id = R.dimen.thickness_divider),
+                color = Color.DarkGray
+            )
+
+            Card(
+                elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.Black),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(150.dp)
+            ){
+                Column(
+                    modifier = Modifier.padding(horizontal = 5.dp, vertical = 15.dp)
+                ) {
+                    Text(text = "Nama   : $textNama", color = Color.White)
+                    Text(text = "Gender : $textJK", color = Color.White)
+                    Text(text = "Status : $textSP", color = Color.White)
+                    Text(text = "Alamat : $textAlamat", color = Color.White)
+                }
+            }
+        }
+    }
+}
