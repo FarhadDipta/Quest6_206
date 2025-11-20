@@ -56,4 +56,19 @@ fun TampilSiswa(
                     space = dimensionResource(R.dimen.padding_small)
                 )
             ){
+                items.forEach { item ->
+                    Column {
+                        Text(text = item.first.uppercase(), fontSize = 16.sp)
+                        Text(
+                            text = item.second,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 16.sp
+                        )
+                    }
+                    HorizontalDivider(
+                        thickness = dimensionResource(R.dimen.thickness_divider)
+                    )
+                }
+                Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_small)))
+            }
 }
