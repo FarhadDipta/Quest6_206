@@ -11,3 +11,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.compose.foundation.layout.padding
+import com.example.myarsitektur.model.DataJK.jenisK
+import com.example.myarsitektur.view.FormSiswa
+import com.example.myarsitektur.view.TampilSiswa
+import com.example.myarsitektur.viewmodel.SiswaViewModel
