@@ -57,3 +57,29 @@ fun FormSiswa(
             )
         }
     ){ paddingValues ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues)
+                .padding(horizontal = 24.dp),
+            verticalArrangement = Arrangement.Top,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ){
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Text(
+                text = "NAMA LENGKAP",
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.align(Alignment.Start)
+            )
+
+            OutlinedTextField(
+                value = textNama,
+                singleLine = true,
+                shape = MaterialTheme.shapes.large,
+                modifier = Modifier.fillMaxWidth(),
+                label = { Text(text = "Nama Lengkap") },
+                onValueChange = { textNama = it }
+            )
+
+            Spacer(modifier = Modifier.height(24.dp))
