@@ -45,3 +45,15 @@ fun FormSiswa(
     var textAlamat by remember { mutableStateOf(value = "") }
     var textJK by remember { mutableStateOf(value = "") }
     var textSP by remember { mutableStateOf(value = "") }
+    val statusKawin: List<String> = listOf("Janda", "Lajang", "Duda")
+
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text(text = "Formulir Pendaftaran", color = Color.White) },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.primary
+                )
+            )
+        }
+    ){ paddingValues ->
