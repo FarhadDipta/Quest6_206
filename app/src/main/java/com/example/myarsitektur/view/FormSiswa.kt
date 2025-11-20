@@ -109,3 +109,36 @@ fun FormSiswa(
             }
 
             Spacer(modifier = Modifier.height(24.dp))
+            Text(
+                text = "ALAMAT",
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.align(Alignment.Start)
+            )
+
+            OutlinedTextField(
+                value = textAlamat,
+                singleLine = true,
+                shape = MaterialTheme.shapes.large,
+                modifier = Modifier.fillMaxWidth(),
+                label = { Text(text = "Alamat Lengkap") },
+                onValueChange = { textAlamat = it }
+            )
+
+            HorizontalDivider(
+                modifier = Modifier.padding(
+                    bottom = dimensionResource(R.dimen.padding_medium),
+                    top = dimensionResource(R.dimen.padding_medium)
+                ),
+                thickness = dimensionResource(R.dimen.thickness_divider),
+                color = Color.DarkGray
+            )
+
+            Button(
+                modifier = Modifier.fillMaxWidth(),
+                enabled = textNama.isNotEmpty() && textJK.isNotEmpty() && textAlamat.isNotEmpty() && textSP.isNotEmpty(),
+                onClick = {
+                    onSubmitButtonClicked(mutableListOf(textNama, textJK, textAlamat))
+                }
+            ) {
+                Text(text = stringResource(id = R.string.submit))
+            }
