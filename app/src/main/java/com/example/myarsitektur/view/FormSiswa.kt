@@ -83,3 +83,29 @@ fun FormSiswa(
             )
 
             Spacer(modifier = Modifier.height(24.dp))
+            Text(
+                text = "JENIS KELAMIN",
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.align(Alignment.Start)
+            )
+            Column {
+                pilihanJK.forEach { item ->
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .selectable(
+                                selected = textJK == item,
+                                onClick = { textJK = item }
+                            ),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        RadioButton(
+                            selected = textJK == item,
+                            onClick = { textJK = item }
+                        )
+                        Text(text = item)
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(24.dp))
