@@ -16,3 +16,8 @@ import com.example.myarsitektur.model.DataJK.jenisK
 import com.example.myarsitektur.view.FormSiswa
 import com.example.myarsitektur.view.TampilSiswa
 import com.example.myarsitektur.viewmodel.SiswaViewModel
+
+enum class Navigasi {
+    Formulir,
+    Detail
+}
